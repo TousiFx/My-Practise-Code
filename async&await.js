@@ -6,14 +6,15 @@ function changeColor(color, delay) {
       head.style.color = color;
       console.log(`color change to ${color}`);
       resolve("color changed");
+      reject("No a color");
     }, delay);
   });
 }
 async function demo() {
-  await changeColor("red", 1000);
-  await changeColor("pink", 1000);
-  await changeColor("blue", 1000);
-  await changeColor("yellow", 1000);
+  await changeColor("red", 2000);
+  await changeColor("green", 2000);
+  await changeColor("blue", 2000);
+  await changeColor("purple", 2000);
 }
 
 /*async function greet() {
