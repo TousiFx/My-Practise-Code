@@ -3,6 +3,10 @@ const head = document.getElementById("Heading");
 function changeColor(color, delay) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
+      const ranNum = Math.floor(Math.random() * 5) + 1;
+      if (ranNum > 3) {
+        reject("Promise Got Rejected. Please try again. ");
+      }
       head.style.color = color;
       console.log(`color change to ${color}`);
       resolve("color changed");
@@ -11,10 +15,18 @@ function changeColor(color, delay) {
   });
 }
 async function demo() {
-  await changeColor("red", 2000);
-  await changeColor("green", 2000);
-  await changeColor("blue", 2000);
-  await changeColor("purple", 2000);
+  try {
+    await changeColor("red", 2000);
+    await changeColor("green", 2000);
+    await changeColor("blue", 2000);
+    await changeColor("purple", 2000);
+  } catch (err) {
+    console.log("Error caught.");
+  }
+
+  let a = 5;
+  console.log(a);
+  console.log("New Number :", a + 3);
 }
 
 /*async function greet() {
