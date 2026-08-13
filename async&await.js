@@ -9,19 +9,20 @@ function changeColor(color, delay) {
       }
       head.style.color = color;
       console.log(`color change to ${color}`);
-      resolve("color changed");
-      reject("No a color");
+      resolve("Promises Fulfilled ");
     }, delay);
   });
 }
 async function demo() {
   try {
-    await changeColor("red", 2000);
-    await changeColor("green", 2000);
-    await changeColor("blue", 2000);
-    await changeColor("purple", 2000);
+    await changeColor("red", 1000);
+    await changeColor("green", 1000);
+    await changeColor("blue", 1000);
+    await changeColor("purple", 1000);
+    console.log("");
   } catch (err) {
     console.log("Error caught.");
+    console.log(err);
   }
 
   let a = 5;
