@@ -58,3 +58,5 @@ async function demo() {
   await getNum();
   await getNum();
 }*/
+
+const somaValue = require("./math.js");
