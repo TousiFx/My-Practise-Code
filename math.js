@@ -3,4 +3,4 @@ const multi = (a, b) => a * b;
 const g = 9.8;
 const PI = 3.14;
 
-module.export = 123;
+module.exports = 123;
