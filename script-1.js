@@ -34,7 +34,7 @@ async function demo() {
   console.log("New Number :", a + 3);
 }
 
-/*async function greet() {
+async function greet() {
   //   throw "error 404";
   return "hello";
 }
@@ -45,8 +45,8 @@ greet()
   })
   .catch((err) => {
     console.log("promise was rejected :", err);
-  });*/
-/*function getNum() {
+  });
+function getNum() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       let num = Math.floor(Math.random() * 10) + 1;
@@ -61,4 +61,4 @@ async function demo() {
   await getNum();
   await getNum();
   await getNum();
-}*/
+}
